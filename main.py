@@ -6,7 +6,7 @@ start_date = "2025-01-20"  # Changed from 2025 to 2020 as future dates won't hav
 interval = "1d"
 try:
     # Download data
-    data = yf.download(ticker, start=start_date, interval=interval)
+    data = yf.download(ticker, start=start_date, interval=interval, auto_adjust=True)
     # Check if data is valid
     if data.empty:
         raise ValueError("No data fetched. Check ticker or internet connection.")
